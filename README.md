@@ -115,26 +115,18 @@ http://localhost:5000
  🔐 Environment Variables
 create .env file in backend folder and well as in frontend folder:
 backend folder .env file:
-# Environment Variables — SupportFlow CRM Backend
-
-# ─── Database ─────────────────────────────────────────────────────────────────
 DATABASE_URL="postgresql://postgres:<postgresql-password@localhost:5433/supportflow_crm"
 
-# ─── Server ───────────────────────────────────────────────────────────────────
 PORT=5000
 NODE_ENV=development
 
-# ─── JWT ──────────────────────────────────────────────────────────────────────
 JWT_SECRET="supportflow-super-secret-key-change-in-production-2026"
 JWT_EXPIRES_IN="7d"
 
-# ─── Gemini AI ────────────────────────────────────────────────────────────────
 GEMINI_API_KEY="API-KEY"
 
-# ─── CORS ─────────────────────────────────────────────────────────────────────
 FRONTEND_URL="http://localhost:3000"
 
-# ─── Rate Limiting ────────────────────────────────────────────────────────────
 RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX=100
 
