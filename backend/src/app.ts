@@ -33,8 +33,10 @@ app.use((req, res) => {
 // Global Error Handler
 app.use(errorHandler);
 
-app.listen(env.PORT, () => {
-  console.log(`🚀 SupportFlow API running at http://localhost:${env.PORT}`);
+const PORT = env.PORT || process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 SupportFlow API running at http://localhost:${PORT}`);
   console.log(`🌍 Environment: ${env.NODE_ENV}`);
 });
 
