@@ -1,5 +1,5 @@
 export async function fetchApi<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const baseUrl = "http://localhost:5000/api";
+  const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
   const token = localStorage.getItem("token");
   
   const response = await fetch(`${baseUrl}${endpoint}`, {
